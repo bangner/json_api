@@ -1,6 +1,7 @@
 # Rails 5 Sample JSON API App
 
-## Setup and Installation
+
+### Setup and Installation
 
 1. Clone this repository from GitHub
 2. Run `bundle install`
@@ -9,7 +10,15 @@
 
 This is a Rails app. The basic rules apply. Your local database will be populated from running `db:seed`. Feel free to add more users/projects in the console.
 
+### Validations
+
+Users require full_name, :bar_id, :bar_state, :email
+
+
 ### Sample Requests
+
+CRUD for Users/Projects
+1. Run `rake routes`
 
 Get User 1's projects
 
