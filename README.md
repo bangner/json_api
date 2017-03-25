@@ -1,24 +1,22 @@
-# README
+# Rails 5 Sample JSON API App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setup and Installation
 
-Things you may want to cover:
+1. Clone this repository from GitHub
+2. Run `bundle install`
+3. Run `rake db:create db:migrate db:seed`
+4. Run `rails s`
 
-* Ruby version
+This is a Rails app. The basic rules apply. Your local database will be populated from running `db:seed`. Feel free to add more users/projects in the console.
 
-* System dependencies
+### Sample Requests
 
-* Configuration
+Get User 1's projects
 
-* Database creation
+`curl -XGET "http://localhost:3000/users/1/projects"`
 
-* Database initialization
+Create a new project for user 1
 
-* How to run the test suite
+`curl -XPOST "http://localhost:3000/users/1/projects" -H "Content-Type: application/json" -d '{"name":"NEW PROJECT", "user_id": "1", "price":"999", "hours":"99"}'`
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+and so on....
